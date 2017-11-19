@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react should enable react if options.react is enabled 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-display-name/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "__esModule": true,
+        "default": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
+exports[`react should enable react optimizations if env is production 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-display-name/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "__esModule": true,
+        "default": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
+exports[`should disable modules if options.modules is disabled 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "__esModule": true,
+        "default": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
+exports[`should return a config for node if options.target is set to node 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "__esModule": true,
+        "default": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
+exports[`should return a good default config 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "__esModule": true,
+        "default": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
