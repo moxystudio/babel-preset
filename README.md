@@ -65,14 +65,14 @@ Available options:
 | react | Adds support for [React](https://reactjs.org/) | boolean | false |
 | modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | commonjs |
 
-*NOTE:* `env`'s default value respects `process.env.BABEL_ENV` & `process.env.NODE_ENV` and fallbacks to `development` if none are set.
+*NOTE:* `env`'s default value respects `process.env.BABEL_ENV` & `process.env.NODE_ENV` and falls back to `development` if none are set.
 
 
 ### `targets` option
 
-The targets option has a very important role. By default, it's value is `['browser', 'node']` which means that the compiled code will work in the Browser and in Node.js.
+The targets option has a very important role. By default, its value is `['browser', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
 
-When `browser` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compile code will work on the last LTS or higher (currently `v8.9`).
+When `browser` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
 
 If you are developing a library or application that has different requirements in terms of browser or node support, you may specify the [targets](https://www.npmjs.com/package/babel-preset-env#targets) yourself as an object.
 
@@ -85,7 +85,7 @@ If you are developing a library or application that has different requirements i
 
 Shipping polyfills in libraries is, in general, a bad practice because it increases the overall file size of your app due to duplication.
 
-The [transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) plugin attempts to solve the polyfills and duplication by transforming `Object.assign`, `Promise` and other features to their `core-js` counter-parts. Though, this doesn't play well with [preset-env](https://github.com/babel/babel-preset-env/tree/1.x/) because it inlines everything even if the features that are already supported by the browsers we are targeting. Additionally, if different versions of the runtime are installed, duplication still happens.
+The [transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) plugin attempts to solve the polyfills and duplication by transforming `Object.assign`, `Promise` and other features to their `core-js` counter-parts. Though, this doesn't play well with [preset-env](https://github.com/babel/babel-preset-env/tree/1.x/) because it inlines everything even if the features we are targeting are already supported by the browsers. Additionally, if different versions of the runtime are installed, duplication still happens.
 
 For this reason, you, as an author, should state in the README of your library that you expect the environment to be polyfilled with [core-js](https://github.com/zloirock/core-js), [babel-polyfill](https://babeljs.io/docs/usage/polyfill/), [polyfill.io](https://polyfill.io/) or similar.
 
