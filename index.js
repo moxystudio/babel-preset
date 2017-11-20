@@ -35,7 +35,7 @@ function addReactSupport(config, options) {
 
 module.exports = (context, options) => {
     options = {
-        targets: ['browser', 'node'], // Can be an array with `browser` and `node` or a an object
+        targets: ['browser', 'node'], // Can be an array with `browser` and `node` or an object
         modules: 'commonjs', // Usually set to `commonjs` or `false`
         debug: false, // Enable debug mode for preset-env
 
@@ -63,7 +63,7 @@ module.exports = (context, options) => {
         modules: options.modules,
         // When on the browser, set the browser support to the same used by Google
         // See https://www.npmjs.com/package/browserslist-config-google
-        // Otherwise, set the target to the version of Node.js that was used to compile
+        // Otherwise, set the target to the latest Node.js LTS
         targets: Array.isArray(options.targets) ? {
             ...options.targets.includes('node') ? { node: '8.9' } : {},
             ...options.targets.includes('browser') ? { browsers: ['extends browserslist-config-google'] } : {},
@@ -75,9 +75,9 @@ module.exports = (context, options) => {
         addReactSupport(config, options);
     }
 
+    // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
-        // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
-        // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } } 
+        // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
         require.resolve('babel-plugin-transform-class-properties'),
         // Support destructuring of objects, e.g.: { ...foo }
         [require.resolve('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }]
