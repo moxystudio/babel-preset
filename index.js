@@ -76,8 +76,8 @@ module.exports = (context, options) => {
     }
 
     config.plugins.push(
-        // The two plugins above activate stage 3 features that babe hasn't added to the stage 3 preset yet
-        // Allows class { handleClick = () => { } }
+        // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
+        // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } } 
         require.resolve('babel-plugin-transform-class-properties'),
         // Support destructuring of objects, e.g.: { ...foo }
         [require.resolve('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }]
