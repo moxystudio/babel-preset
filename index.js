@@ -36,10 +36,10 @@ function addReactSupport(config, options) {
 module.exports = (context, options) => {
     options = {
         targets: ['browser', 'node'], // Can be an array with `browser` and `node` or an object
-        modules: 'commonjs', // Usually set to `commonjs` or `false`
+        modules: process.env.BABEL_ENV === 'es' ? false : 'commonjs', // Usually set to `commonjs` or `false`
         debug: false, // Enable debug mode for preset-env
 
-        env: process.env.BABEL_NODE || process.env.NODE_ENV || 'development',
+        env: process.env.NODE_ENV || 'production',
         react: false,
         ...options,
     };

@@ -38,21 +38,29 @@ Please note that **there are little reasons** to use Babel when you are developi
 
 ## Usage
 
+Create `.babelrc` at the root of your project:
+
 ```json
-// .babelrc
 {
     "presets": ["moxy"]
 }
 ```
 
-..or with options
+...or with options:
 
 ```json
-// .babelrc
 {
-    "presets": [
-        ["moxy", { "react": true }]
-    ]
+    "presets": [["moxy", { "react": true }]]
+}
+```
+
+And set up your `package.json` scripts like this:
+
+```json
+"scripts": {
+  "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
+  "build:es": "BABEL_ENV=es babel src -d es",
+  "build": "npm run build:commonjs && npm run build:es"
 }
 ```
 
@@ -60,12 +68,14 @@ Available options:
 
 | Name   | Description   | Type     | Default |
 | ------ | ------------- | -------- | ------- |
-| env | The environment (`development`, `production` or `test`) | string | Based on `process.env` |
+| env | The environment (`development`, `production` or `test`) | string | Based on `process.env.NODE_ENV` |
 | targets | The output targets, see bellow for a more detailed explanation | Array/[Object](https://www.npmjs.com/package/babel-preset-env#targets) | ['browser', 'node']
 | react | Adds support for [React](https://reactjs.org/) | boolean | false |
-| modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | commonjs |
+| modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV` |
 
-*NOTE:* `env`'s default value respects `process.env.BABEL_ENV` & `process.env.NODE_ENV` and falls back to `development` if none are set.
+The `env`'s default value respects `process.env.NODE_ENV` and falls back to `production` if none are set. When env is `production`, some plugins that perform code optimization will be enabled.
+
+The `modules` default value is `commonjs` unless `process.env.BABEL_ENV` is set to `es`.
 
 
 ### `targets` option

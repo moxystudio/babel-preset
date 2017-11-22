@@ -25,6 +25,16 @@ it('should disable modules if options.modules is disabled', () => {
     expect(preset(null, { modules: false })).toMatchSnapshot();
 });
 
+it('should set modules to false if BABEL_ENV is es', () => {
+    process.env.BABEL_ENV = 'es';
+
+    try {
+        expect(preset(null)).toMatchSnapshot();
+    } finally {
+        delete process.env.BABEL_ENV;
+    }
+});
+
 describe('react', () => {
     it('should enable react if options.react is enabled and enable development goodies', () => {
         expect(preset(null, { react: true })).toMatchSnapshot();
