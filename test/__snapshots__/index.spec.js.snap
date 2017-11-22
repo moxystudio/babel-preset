@@ -226,3 +226,34 @@ Object {
   ],
 }
 `;
+
+exports[`should set modules to false if BABEL_ENV is es 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-preset-env/lib/index.js",
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
