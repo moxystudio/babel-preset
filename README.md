@@ -23,6 +23,8 @@ Babel preset to be used at MOXY.
 
 `$ npm install babel-preset-moxy --save-dev`
 
+You might need to also install `babel-cli` as a dev dependency.
+
 
 ## Motivation
 
@@ -54,15 +56,20 @@ Create `.babelrc` at the root of your project:
 }
 ```
 
-And set up your `package.json` scripts like this:
+Set up your `package.json` like this:
 
 ```json
+"main": "lib/index.js",
+"module": "es/index.js",
 "scripts": {
   "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
   "build:es": "BABEL_ENV=es babel src -d es",
   "build": "npm run build:commonjs && npm run build:es"
 }
 ```
+
+And finally create `src/index.js` and start coding!
+
 
 Available options:
 
