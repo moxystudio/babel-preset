@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/moxystudio/babel-preset-moxy/compare/v2.0.0...v2.0.1) (2017-11-23)
+
+
+### Bug Fixes
+
+* fix add-module-exports plugin not being in deps ([1535d86](https://github.com/moxystudio/babel-preset-moxy/commit/1535d86))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/moxystudio/babel-preset-moxy/compare/v1.1.0...v2.0.0) (2017-11-23)
 
