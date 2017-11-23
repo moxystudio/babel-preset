@@ -23,7 +23,7 @@
 
 `$ npm install babel-preset-moxy --save-dev`
 
-You might need to also install `babel-cli` as a dev dependency.
+You might need to also install [babel-cli](https://www.npmjs.com/package/babel-cli) as a dev dependency.
 
 
 ## Motivation
