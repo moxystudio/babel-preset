@@ -16,7 +16,7 @@
 [greenkeeper-image]:https://badges.greenkeeper.io/moxystudio/babel-preset-moxy.svg
 [greenkeeper-url]:https://greenkeeper.io
 
-Babel preset to be used at MOXY.
+[Babel](https://babeljs.io/) preset to be used at MOXY.
 
 
 ## Installation
