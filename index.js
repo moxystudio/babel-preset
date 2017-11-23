@@ -35,14 +35,24 @@ function addReactSupport(config, options) {
 
 module.exports = (context, options) => {
     options = {
-        targets: ['browser', 'node'], // Can be an array with `browser` and `node` or an object
+        targets: ['browsers', 'node'], // Can be an array with `browsers` and/or `node` or an object
         modules: process.env.BABEL_ENV === 'es' ? false : 'commonjs', // Usually set to `commonjs` or `false`
         debug: false, // Enable debug mode for preset-env
 
         env: process.env.NODE_ENV || 'production',
         react: false,
+        namedDefaultExport: null,
         ...options,
     };
+
+    if (options.modules !== 'commonjs' && options.namedDefaultExport) {
+        throw new Error('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
+    }
+
+    // Set `namedDefaultExport` default value based on `modules`
+    if (options.namedDefaultExport == null) {
+        options.namedDefaultExport = options.modules === 'commonjs';
+    }
 
     const config = {
         presets: [],
@@ -61,12 +71,11 @@ module.exports = (context, options) => {
         debug: options.debug,
         // Set modules options
         modules: options.modules,
-        // When on the browser, set the browser support to the same used by Google
-        // See https://www.npmjs.com/package/browserslist-config-google
-        // Otherwise, set the target to the latest Node.js LTS
+        // Set the browser support to be the same used by Google (https://www.npmjs.com/package/browserslist-config-google)
+        // Set Nodejs target to be the latest LTS
         targets: Array.isArray(options.targets) ? {
             ...options.targets.includes('node') ? { node: '8.9' } : {},
-            ...options.targets.includes('browser') ? { browsers: ['extends browserslist-config-google'] } : {},
+            ...options.targets.includes('browsers') ? { browsers: ['extends browserslist-config-google'] } : {},
         } : options.targets,
     }]);
 
@@ -82,6 +91,11 @@ module.exports = (context, options) => {
         // Support destructuring of objects, e.g.: { ...foo }
         [require.resolve('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }]
     );
+
+    // Add `module.exports = default;`, see https://github.com/59naga/babel-plugin-add-module-exports
+    if (options.namedDefaultExport) {
+        config.plugins.push('babel-plugin-add-module-exports');
+    }
 
     return config;
 };

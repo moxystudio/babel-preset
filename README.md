@@ -34,8 +34,9 @@ If you are developing a project that uses new ECMAScript language features and m
 - Enables [class-properties](https://www.npmjs.com/package/babel-plugin-transform-class-properties) (stage 3)
 - Enables [object-rest-spread](https://www.npmjs.com/package/babel-plugin-transform-object-rest-spread) (stage 3)
 - Optionally enables React
+- Uses [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212)
 
-Please note that **there are little reasons** to use Babel when you are developing a library that **only targets Node.js** because the latest LTS and current version support [99%](http://node.green/) of ES8. Though, if you really need to, consider adding [add-exports](https://github.com/59naga/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212).
+Please note that **there are few reasons** to use Babel when you are developing a library that **only targets Node.js** because the latest LTS and current version support [99%](http://node.green/) of ES8.
 
 
 ## Usage
@@ -76,9 +77,10 @@ Available options:
 | Name   | Description   | Type     | Default |
 | ------ | ------------- | -------- | ------- |
 | env | The environment (`development`, `production` or `test`) | string | Based on `process.env.NODE_ENV` |
-| targets | The output targets, see bellow for a more detailed explanation | Array/[Object](https://www.npmjs.com/package/babel-preset-env#targets) | ['browser', 'node']
+| targets | The output targets, see bellow for a more detailed explanation | Array/[Object](https://www.npmjs.com/package/babel-preset-env#targets) | ['browsers', 'node']
 | react | Adds support for [React](https://reactjs.org/) | boolean | false |
 | modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV` |
+| namedDefaultExport | Use [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) plugin to get around [babel/babel#2212](https://github.com/babel/babel/issues/2212) | boolean | true if modules is `commonjs` |
 
 The `env`'s default value respects `process.env.NODE_ENV` and falls back to `production` if none are set. When env is `production`, some plugins that perform code optimization will be enabled.
 
@@ -87,9 +89,9 @@ The `modules` default value is `commonjs` unless `process.env.BABEL_ENV` is set 
 
 ### `targets` option
 
-The targets option has a very important role. By default, its value is `['browser', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
+The targets option has a very important role. By default, its value is `['browsers', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
 
-When `browser` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
+When `browsers` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
 
 If you are developing a library or application that has different requirements in terms of browser or node support, you may specify the [targets](https://www.npmjs.com/package/babel-preset-env#targets) yourself as an object.
 
