@@ -34,7 +34,7 @@ function addReactSupport(config, options) {
 // -----------------------------------------------
 
 module.exports = (context, options) => {
-    options = {
+    options = Object.assign({
         targets: ['browsers', 'node'], // Can be an array with `browsers` and/or `node` or an object
         modules: process.env.BABEL_ENV === 'es' ? false : 'commonjs', // Usually set to `commonjs` or `false`
         debug: false, // Enable debug mode for preset-env
@@ -42,8 +42,7 @@ module.exports = (context, options) => {
         env: process.env.NODE_ENV || 'production',
         react: false,
         namedDefaultExport: null,
-        ...options,
-    };
+    }, options);
 
     if (options.modules !== 'commonjs' && options.namedDefaultExport) {
         throw new Error('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
@@ -73,10 +72,10 @@ module.exports = (context, options) => {
         modules: options.modules,
         // Set the browser support to be the same used by Google (https://www.npmjs.com/package/browserslist-config-google)
         // Set Nodejs target to be the latest LTS
-        targets: Array.isArray(options.targets) ? {
-            ...options.targets.includes('node') ? { node: '8.9' } : {},
-            ...options.targets.includes('browsers') ? { browsers: ['extends browserslist-config-google'] } : {},
-        } : options.targets,
+        targets: Array.isArray(options.targets) ? Object.assign({},
+            options.targets.indexOf('node') !== -1 ? { node: '8.9' } : {},
+            options.targets.indexOf('browsers') !== -1 ? { browsers: ['extends browserslist-config-google'] } : {}
+        ) : options.targets,
     }]);
 
     // Add react support
