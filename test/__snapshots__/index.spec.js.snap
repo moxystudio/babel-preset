@@ -1,5 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`lodash should disable react if options.lodash is disabled 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-preset-env/lib/index.js",
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
+exports[`lodash should pass any options to the lodash plugin 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": "lodash-compat",
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-preset-env/lib/index.js",
+      Object {
+        "debug": false,
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": true,
+      },
+    ],
+  ],
+}
+`;
+
 exports[`modules should set modules to false by default if BABEL_ENV is es 1`] = `
 Object {
   "plugins": Array [
@@ -9,6 +79,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
   ],
   "presets": Array [
@@ -41,6 +115,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
   ],
   "presets": Array [
     Array [
@@ -71,6 +149,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -104,6 +186,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
     "babel-plugin-add-module-exports",
   ],
   "presets": Array [
@@ -135,6 +221,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -168,6 +258,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
   ],
   "presets": Array [
     Array [
@@ -198,6 +292,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -231,6 +329,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
   ],
   "presets": Array [
     Array [
@@ -261,6 +363,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -294,6 +400,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
   ],
   "presets": Array [
     Array [
@@ -326,14 +436,18 @@ Object {
       },
     ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-display-name/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
       },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -368,15 +482,19 @@ Object {
       },
     ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-display-name/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
       },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -410,6 +528,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
     "babel-plugin-add-module-exports",
   ],
   "presets": Array [
@@ -438,6 +560,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -470,6 +596,10 @@ Object {
         "useBuiltIns": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
+    ],
     "babel-plugin-add-module-exports",
   ],
   "presets": Array [
@@ -498,6 +628,10 @@ Object {
       Object {
         "useBuiltIns": true,
       },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {},
     ],
     "babel-plugin-add-module-exports",
   ],

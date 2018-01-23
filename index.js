@@ -41,6 +41,7 @@ module.exports = (context, options) => {
 
         env: process.env.NODE_ENV || 'production',
         react: false,
+        lodash: true,
         namedDefaultExport: null,
     }, options);
 
@@ -78,11 +79,6 @@ module.exports = (context, options) => {
         ) : options.targets,
     }]);
 
-    // Add react support
-    if (options.react) {
-        addReactSupport(config, options);
-    }
-
     // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
@@ -90,6 +86,19 @@ module.exports = (context, options) => {
         // Support destructuring of objects, e.g.: { ...foo }
         [require.resolve('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }]
     );
+
+    // Add react support
+    if (options.react) {
+        addReactSupport(config, options);
+    }
+
+    // Cherry-pick lodash modules for smaller bundles
+    if (options.lodash) {
+        config.plugins.push([
+            require.resolve('babel-plugin-lodash'),
+            options.lodash === true ? {} : options.lodash,
+        ]);
+    }
 
     // Add `module.exports = default;`, see https://github.com/59naga/babel-plugin-add-module-exports
     if (options.namedDefaultExport) {
