@@ -62,6 +62,10 @@ Set up your `package.json` like this:
 ```json
 "main": "lib/index.js",
 "module": "es/index.js",
+"files": [
+  "lib",
+  "es"
+],
 "scripts": {
   "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
   "build:es": "BABEL_ENV=es babel src -d es",
