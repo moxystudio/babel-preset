@@ -40,12 +40,22 @@ describe('modules', () => {
 });
 
 describe('react', () => {
-    it('should enable react if options.react is enabled and enable development goodies', () => {
+    it('should enable react plugins if options.react is enabled and enable development goodies', () => {
         expect(preset(null, { react: true })).toMatchSnapshot();
     });
 
     it('should enable react optimizations if options.env is production', () => {
         expect(preset(null, { env: 'production', react: true })).toMatchSnapshot();
+    });
+});
+
+describe('lodash', () => {
+    it('should disable the lodash plugin if options.lodash is disabled', () => {
+        expect(preset(null, { lodash: false })).toMatchSnapshot();
+    });
+
+    it('should pass any options to the lodash plugin', () => {
+        expect(preset(null, { lodash: { id: 'lodash-compat' } })).toMatchSnapshot();
     });
 });
 
