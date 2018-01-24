@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`lodash should disable react if options.lodash is disabled 1`] = `
+exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
@@ -425,7 +425,7 @@ Object {
 }
 `;
 
-exports[`react should enable react if options.react is enabled and enable development goodies 1`] = `
+exports[`react should enable react optimizations if options.env is production 1`] = `
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/babel-plugin-syntax-jsx/lib/index.js",
@@ -443,8 +443,9 @@ Object {
         "useBuiltIns": true,
       },
     ],
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {},
@@ -471,7 +472,7 @@ Object {
 }
 `;
 
-exports[`react should enable react optimizations if options.env is production 1`] = `
+exports[`react should enable react plugins if options.react is enabled and enable development goodies 1`] = `
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/babel-plugin-syntax-jsx/lib/index.js",
@@ -489,9 +490,8 @@ Object {
         "useBuiltIns": true,
       },
     ],
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {},
