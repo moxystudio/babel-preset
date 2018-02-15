@@ -35,6 +35,7 @@ If you are developing a project that uses new ECMAScript language features and m
 - Enables [object-rest-spread](https://www.npmjs.com/package/babel-plugin-transform-object-rest-spread) (stage 3)
 - Optionally enables React
 - Uses [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212)
+- Enables [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash)
 
 Please note that **there are few reasons** to use Babel when you are developing a library that **only targets Node.js** because the latest LTS and current version support [99%](http://node.green/) of ES8.
 
@@ -85,6 +86,7 @@ Available options:
 | react | Adds support for [React](https://reactjs.org/) | boolean | false |
 | modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV` |
 | namedDefaultExport | Use [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) plugin to get around [babel/babel#2212](https://github.com/babel/babel/issues/2212) | boolean | true if modules is `commonjs` |
+| lodash | Transform to cherry-pick Lodash modules | boolean/[Object](https://github.com/lodash/babel-plugin-lodash#usage) | true |
 
 The `env`'s default value respects `process.env.NODE_ENV` and falls back to `production` if none are set. When env is `production`, some plugins that perform code optimization will be enabled.
 
