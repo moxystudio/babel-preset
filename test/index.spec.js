@@ -55,7 +55,7 @@ describe('lodash', () => {
     });
 
     it('should pass any options to the lodash plugin', () => {
-        expect(preset(null, { lodash: { id: 'lodash-compat' } })).toMatchSnapshot();
+        expect(preset(null, { lodash: { id: 'recompose' } })).toMatchSnapshot();
     });
 });
 
