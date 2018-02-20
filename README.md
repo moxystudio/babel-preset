@@ -101,6 +101,21 @@ When `browsers` is specified, the compiled code will work on browsers that are s
 
 If you are developing a library or application that has different requirements in terms of browser or node support, you may specify the [targets](https://www.npmjs.com/package/babel-preset-env#targets) yourself as an object.
 
+### `lodash` option
+
+Specify which modules will have the cherry-pick transformation applied.
+
+Note that `lodash-es`, `lodash-compat` and `lodash/fp` are always added for you, regardless of having this option defined or not.
+
+For instance, to have smaller bundles when using [recompose](https://github.com/acdlite/recompose):
+
+```json
+{
+    "lodash": [[ "id": ["recompose"] ]],
+}
+```
+
+
 
 ## Caveats
 

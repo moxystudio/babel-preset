@@ -43,9 +43,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
       Object {
-        "id": "lodash-compat",
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+          "recompose",
+        ],
       },
     ],
     "babel-plugin-add-module-exports",
@@ -81,8 +89,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
   ],
   "presets": Array [
@@ -116,8 +133,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
   ],
   "presets": Array [
@@ -151,8 +177,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -187,8 +222,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -223,8 +267,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -259,8 +312,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
   ],
   "presets": Array [
@@ -294,8 +356,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -330,8 +401,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
   ],
   "presets": Array [
@@ -365,8 +445,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -401,8 +490,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
   ],
   "presets": Array [
@@ -447,8 +545,17 @@ Object {
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -493,8 +600,17 @@ Object {
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -529,8 +645,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -562,8 +687,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -597,8 +731,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],
@@ -630,8 +773,17 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {},
+      Array [
+        "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      ],
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
     ],
     "babel-plugin-add-module-exports",
   ],

@@ -94,9 +94,19 @@ module.exports = (context, options) => {
 
     // Cherry-pick lodash modules for smaller bundles
     if (options.lodash) {
+        // Re-include default ids plus lodash/fp
+        const baseLodashOptionsIds = [
+            'lodash',
+            'lodash-es',
+            'lodash-compat',
+            'lodash/fp',
+        ];
+
         config.plugins.push([
-            require.resolve('babel-plugin-lodash'),
-            options.lodash === true ? {} : options.lodash,
+            [require.resolve('babel-plugin-lodash')],
+            Object.assign({},
+                options.lodash,
+                { id: baseLodashOptionsIds.concat(options.lodash.id || []) }),
         ]);
     }
 
