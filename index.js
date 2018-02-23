@@ -103,7 +103,7 @@ module.exports = (context, options) => {
         ];
 
         config.plugins.push([
-            [require.resolve('babel-plugin-lodash')],
+            require.resolve('babel-plugin-lodash'),
             Object.assign({},
                 options.lodash,
                 { id: baseLodashOptionsIds.concat(options.lodash.id || []) }),
