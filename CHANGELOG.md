@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.1"></a>
+## [2.2.1](https://github.com/moxystudio/babel-preset-moxy/compare/v2.2.0...v2.2.1) (2018-02-23)
+
+
+### Bug Fixes
+
+* fix lodash plugin being wrongly setup ([678a7c0](https://github.com/moxystudio/babel-preset-moxy/commit/678a7c0))
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://github.com/moxystudio/babel-preset-moxy/compare/v2.1.0...v2.2.0) (2018-02-20)
 
