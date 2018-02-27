@@ -77,7 +77,7 @@ Set up your `package.json` like this:
 And finally create `src/index.js` and start coding!
 
 
-Available options:
+## Options:
 
 | Name   | Description   | Type     | Default |
 | ------ | ------------- | -------- | ------- |
@@ -86,22 +86,26 @@ Available options:
 | react | Adds support for [React](https://reactjs.org/) | boolean | false |
 | modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV` |
 | namedDefaultExport | Use [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) plugin to get around [babel/babel#2212](https://github.com/babel/babel/issues/2212) | boolean | true if modules is `commonjs` |
+| regenerator | Adds support for async/await and generators | boolean | true |
 | lodash | Transform to cherry-pick Lodash modules | boolean/[Object](https://github.com/lodash/babel-plugin-lodash#usage) | true |
 
-The `env`'s default value respects `process.env.NODE_ENV` and falls back to `production` if none are set. When env is `production`, some plugins that perform code optimization will be enabled.
+### `env`
 
-The `modules` default value is `commonjs` unless `process.env.BABEL_ENV` is set to `es`.
+The default value respects `process.env.NODE_ENV` and falls back to `production` if none are set. When env is `production`, some plugins that perform code optimization will be enabled.
 
+### `modules`
 
-### `targets` option
+The default value is `commonjs` unless `process.env.BABEL_ENV` is set to `es`.
 
-The targets option has a very important role. By default, its value is `['browsers', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
+### `targets`
+
+This option has a very important role. By default, its value is `['browsers', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
 
 When `browsers` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
 
 If you are developing a library or application that has different requirements in terms of browser or node support, you may specify the [targets](https://www.npmjs.com/package/babel-preset-env#targets) yourself as an object.
 
-### `lodash` option
+### `lodash`
 
 Specify which modules will have the cherry-pick transformation applied.
 
@@ -114,7 +118,6 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
     "lodash": [[ "id": ["recompose"] ]],
 }
 ```
-
 
 
 ## Caveats
@@ -131,7 +134,7 @@ For this reason, you, as an author, should state in the README of your library t
 
 #### For applications
 
-Simply include `import 'babel-polyfill';` or `import 'core-js';` at the top of your main app file.
+Simply include `import 'babel-polyfill';` or `import 'core-js';` at the top of your main app file, and disable the `regenerator` option to avoid duplication.
 Those statements will be replaced with the necessary polyfills based on node/browser support.
 
 ```js
