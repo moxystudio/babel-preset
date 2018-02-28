@@ -49,6 +49,16 @@ describe('react', () => {
     });
 });
 
+describe('regenerator', () => {
+    it('should enable the regenerator option on babel-plugin-transform-runtime by default', () => {
+        expect(preset(null)).toMatchSnapshot();
+    });
+
+    it('should disable the regenerator option on babel-plugin-transform-runtime if options.regenerator is disabled', () => {
+        expect(preset(null, { regenerator: false })).toMatchSnapshot();
+    });
+});
+
 describe('lodash', () => {
     it('should disable the lodash plugin if options.lodash is disabled', () => {
         expect(preset(null, { lodash: false })).toMatchSnapshot();
