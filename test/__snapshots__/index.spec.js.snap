@@ -10,14 +10,6 @@ Object {
         "useBuiltIns": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
     "babel-plugin-add-module-exports",
   ],
   "presets": Array [
@@ -48,14 +40,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -103,14 +87,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -153,14 +129,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -200,14 +168,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -254,14 +214,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -302,14 +254,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -356,14 +300,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -403,14 +339,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -457,14 +385,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -504,14 +424,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -555,14 +467,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -613,14 +517,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
@@ -677,110 +573,8 @@ Object {
         "useBuiltIns": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {
-        "id": Array [
-          "lodash",
-          "lodash-es",
-          "lodash-compat",
-          "lodash/fp",
-        ],
-      },
-    ],
-    "babel-plugin-add-module-exports",
-  ],
-  "presets": Array [
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-preset-env/lib/index.js",
-      Object {
-        "debug": false,
-        "loose": true,
-        "modules": "commonjs",
-        "targets": Object {
-          "browsers": Array [
-            "extends browserslist-config-google",
-          ],
-          "node": "8.9",
-        },
-        "useBuiltIns": true,
-      },
-    ],
-  ],
-}
-`;
-
-exports[`regenerator should disable the regenerator option on babel-plugin-transform-runtime if options.regenerator is disabled 1`] = `
-Object {
-  "plugins": Array [
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
-      Object {
-        "id": Array [
-          "lodash",
-          "lodash-es",
-          "lodash-compat",
-          "lodash/fp",
-        ],
-      },
-    ],
-    "babel-plugin-add-module-exports",
-  ],
-  "presets": Array [
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-preset-env/lib/index.js",
-      Object {
-        "debug": false,
-        "loose": true,
-        "modules": "commonjs",
-        "targets": Object {
-          "browsers": Array [
-            "extends browserslist-config-google",
-          ],
-          "node": "8.9",
-        },
-        "useBuiltIns": true,
-      },
-    ],
-  ],
-}
-`;
-
-exports[`regenerator should enable the regenerator option on babel-plugin-transform-runtime by default 1`] = `
-Object {
-  "plugins": Array [
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -825,14 +619,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -870,14 +656,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [
@@ -923,14 +701,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -968,14 +738,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js",
       Object {
         "useBuiltIns": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-runtime/lib/index.js",
-      Object {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
       },
     ],
     Array [

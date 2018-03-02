@@ -43,7 +43,6 @@ module.exports = (context, options) => {
         react: false,
         lodash: true,
         namedDefaultExport: null,
-        regenerator: true,
     }, options);
 
     if (options.modules !== 'commonjs' && options.namedDefaultExport) {
@@ -87,17 +86,6 @@ module.exports = (context, options) => {
         // Support destructuring of objects, e.g.: { ...foo }
         [require.resolve('babel-plugin-transform-object-rest-spread'), { useBuiltIns: true }]
     );
-
-    // Add async/await and generators support
-    if (options.regenerator) {
-        config.plugins.push(
-            [require.resolve('babel-plugin-transform-runtime'), {
-                helpers: false,
-                polyfill: false,
-                regenerator: true,
-            }]
-        );
-    }
 
     // Add react support
     if (options.react) {
