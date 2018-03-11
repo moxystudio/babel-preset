@@ -25,6 +25,8 @@
 
 You might need to also install [babel-cli](https://www.npmjs.com/package/babel-cli) as a dev dependency.
 
+Please read the [Caveats](#caveats) section because it contains important notes that you should be aware of.
+
 
 ## Motivation
 
@@ -111,7 +113,11 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
 
 ```json
 {
-    "lodash": [[ "id": ["recompose"] ]],
+    "presets": [
+        ["moxy", {
+            "lodash": { "id": ["recompose"] }
+        }]
+    ]
 }
 ```
 
@@ -127,7 +133,7 @@ Shipping polyfills in libraries is, in general, a bad practice because it increa
 
 The [transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) plugin attempts to solve the polyfills and duplication by transforming `Object.assign`, `Promise` and other features to their [core-js](https://github.com/zloirock/core-js) counter-parts. Though, this doesn't play well with [preset-env](https://github.com/babel/babel-preset-env/tree/1.x/) because it inlines everything, including features that are already supported by our targets. Additionally, if different versions of the runtime are installed, duplication still happens.
 
-For this reason, you, as an author, should state in the README of your library that you expect the environment to be polyfilled with [core-js](https://github.com/zloirock/core-js), [babel-polyfill](https://babeljs.io/docs/usage/polyfill/), [polyfill.io](https://polyfill.io/) or similar.
+For this reason, you, as an author, should state in the README of your library that you expect the environment to be polyfilled with [core-js](https://github.com/zloirock/core-js), [babel-polyfill](https://babeljs.io/docs/usage/polyfill/), [polyfill.io](https://polyfill.io/) or similar. If your library uses `async await`, you should also state that you depend on having [regenerator-runtime](https://www.npmjs.com/package/regenerator-runtime) installed globally.
 
 #### For applications
 
@@ -144,9 +150,22 @@ import 'core-js/modules/es6.promise';
 // ...
 ```
 
+Note that if you are only targeting environments that already support `async await` natively, such as Nodejs >= v8, the `regenerator-runtime` won't be installed automatically. This is fine, except if your app uses dependencies that rely on the `regeneratorRuntime` global.
+To get around this, you must have `regenerator-runtime/runtime` required at the top of your main app file. Alternatively, if you use Webpack, you may use the [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) as follows:
+
+```js
+{
+    plugins: [
+        new ProvidePlugin({
+            regeneratorRuntime: require.resolve('regenerator-runtime'),
+        }),
+    ]
+}
+```
+
 #### Dynamic imports
 
-This preset does not enable support for dynamic imports.
+This preset does not provide support for dynamic imports.
 
 If you are only targeting Browsers and you are bundling your code with a bundler that recognizes dynamic import statements (e.g.: Webpack), you may want to activate [syntax-dynamic-import](https://www.npmjs.com/package/babel-plugin-syntax-dynamic-import).
 
