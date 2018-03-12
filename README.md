@@ -163,7 +163,7 @@ To get around this, you must have `regenerator-runtime/runtime` required at the 
 }
 ```
 
-#### Dynamic imports
+### Dynamic imports
 
 This preset does not provide support for dynamic imports.
 
@@ -171,7 +171,7 @@ If you are only targeting Browsers and you are bundling your code with a bundler
 
 If you are only targeting Node.js, you may want to use [dynamic-import-node]( https://www.npmjs.com/package/babel-plugin-dynamic-import-node) but beware that this won't work for browsers.
 
-#### Minifying
+### Minifying
 
 You must use a minifier that understands ES6+ syntax because the transpiled code might contain ES6+ code.
 As an example, UglifyJS v2 only understands ES5 syntax but [UglifyJS v3](https://www.npmjs.com/package/uglify-es) does support ES6+.
