@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.3"></a>
+## [2.3.3](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.2...v2.3.3) (2018-03-22)
+
+
+### Bug Fixes
+
+* remove babel-plugin-transform-react-constant-elements ([#25](https://github.com/moxystudio/babel-preset-moxy/issues/25)) ([4c1ab03](https://github.com/moxystudio/babel-preset-moxy/commit/4c1ab03))
+
+
+
 <a name="2.3.2"></a>
 ## [2.3.2](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.1...v2.3.2) (2018-03-11)
 
