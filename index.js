@@ -12,7 +12,6 @@ function addReactSupport(config, options) {
     if (options.env === 'production') {
         config.plugins.push(
             require.resolve('babel-plugin-transform-react-remove-prop-types'),
-            require.resolve('babel-plugin-transform-react-constant-elements'),
             require.resolve('babel-plugin-transform-react-inline-elements')
         );
     // The following two plugins are currently necessary to make React warnings include more valuable information.

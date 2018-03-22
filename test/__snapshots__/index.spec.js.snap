@@ -520,7 +520,6 @@ Object {
       },
     ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
-    "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-constant-elements/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-inline-elements/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
