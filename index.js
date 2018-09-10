@@ -11,8 +11,7 @@ function addReactSupport(config, options) {
     // Enable optimizations on production
     if (options.env === 'production') {
         config.plugins.push(
-            require.resolve('babel-plugin-transform-react-remove-prop-types'),
-            require.resolve('babel-plugin-transform-react-inline-elements')
+            require.resolve('babel-plugin-transform-react-remove-prop-types')
         );
     // The following two plugins are currently necessary to make React warnings include more valuable information.
     // They are included here because they are currently not enabled in babel-preset-react.
@@ -20,7 +19,7 @@ function addReactSupport(config, options) {
     // https://github.com/babel/babel/issues/4702
     // https://github.com/babel/babel/pull/3540#issuecomment-228673661
     // https://github.com/facebookincubator/create-react-app/issues/989
-    } else {
+    } else if (options.env === 'development') {
         config.plugins.push(
             // Adds component stack to warning messages
             require.resolve('babel-plugin-transform-react-jsx-source'),
