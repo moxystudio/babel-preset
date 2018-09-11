@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.5"></a>
+## [2.3.5](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.4...v2.3.5) (2018-09-11)
+
+
+
 <a name="2.3.4"></a>
 ## [2.3.4](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.3...v2.3.4) (2018-09-10)
 
