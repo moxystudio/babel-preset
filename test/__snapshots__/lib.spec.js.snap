@@ -1,0 +1,577 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 2`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 3`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 4`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 5`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 6`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 7`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`dynamicImport should respect options.modules and options.dynamicImport 8`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`functional class-properties should handle correctly 1`] = `
+"\\"use strict\\";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+class Bork {
+  constructor() {
+    _defineProperty(this, \\"x\\", 'bar');
+
+    _defineProperty(this, \\"y\\", void 0);
+  }
+
+}
+
+_defineProperty(Bork, \\"a\\", 'foo');
+
+_defineProperty(Bork, \\"b\\", void 0);"
+`;
+
+exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`lodash should pass any options to the lodash plugin 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+          "recompose",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`modules should set modules to false by default if BABEL_ENV is es 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`modules should set modules to false if options.modules is disabled 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should enable add-module-exports by default 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should enable add-module-exports if options.modules is commonjs 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should enable add-module-exports if options.modules is commonjs 2`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should not enable add-module-exports if options.modules is not commonjs 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 2`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 3`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 4`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 5`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`namedDefaultExport & babel-plugin-add-module-exports should respect options.namedDefaultExport 6`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`react should enable react optimizations if options.env is production 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`react should enable react plugins if options.react is enabled and enable development goodies 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;
+
+exports[`should have the right config with the default options 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-transform-modules-commonjs",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+    "babel-plugin-add-module-exports",
+  ],
+  "presets": Array [],
+}
+`;

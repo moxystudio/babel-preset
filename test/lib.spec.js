@@ -1,26 +1,19 @@
 'use strict';
 
+const babelCore = require('@babel/core');
 const serializerPath = require('jest-serializer-path');
-const preset = require('..');
+const preset = require('../lib');
+
+const env = process.env.NODE_ENV;
 
 expect.addSnapshotSerializer(serializerPath);
 
-describe('targets', () => {
-    it('should return a default config that target browsers and node', () => {
-        expect(preset()).toMatchSnapshot();
-    });
+afterEach(() => {
+    process.env.NODE_ENV = env;
+});
 
-    it('should return a config for node if options.targets is set to node', () => {
-        expect(preset(null, { targets: ['node'] })).toMatchSnapshot();
-    });
-
-    it('should return a config for browsers if options.targets is set to browsers', () => {
-        expect(preset(null, { targets: ['browsers'] })).toMatchSnapshot();
-    });
-
-    it('should allow overriding options.targets with an object', () => {
-        expect(preset(null, { targets: { node: 'current' } })).toMatchSnapshot();
-    });
+it('should have the right config with the default options', () => {
+    expect(preset()).toMatchSnapshot();
 });
 
 describe('modules', () => {
@@ -75,13 +68,47 @@ describe('namedDefaultExport & babel-plugin-add-module-exports', () => {
 
     it('should respect options.namedDefaultExport', () => {
         expect(preset(null, { namedDefaultExport: true })).toMatchSnapshot();
-        expect(preset(null, { namedDefaultExport: false })).toMatchSnapshot();
         expect(preset(null, { modules: 'commonjs', namedDefaultExport: true })).toMatchSnapshot();
+        expect(preset(null, { modules: 'cjs', namedDefaultExport: true })).toMatchSnapshot();
+        expect(preset(null, { namedDefaultExport: false })).toMatchSnapshot();
         expect(preset(null, { modules: 'commonjs', namedDefaultExport: false })).toMatchSnapshot();
+        expect(preset(null, { modules: 'cjs', namedDefaultExport: false })).toMatchSnapshot();
     });
 
     it('should throw when enabling options.namedDefaultExport and options.modules is not commonjs', () => {
         expect(() => preset(null, { modules: false, namedDefaultExport: true }))
         .toThrow('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
+    });
+});
+
+describe('dynamicImport', () => {
+    it('should respect options.modules and options.dynamicImport', () => {
+        expect(preset(null, { modules: 'commonjs', dynamicImport: true })).toMatchSnapshot();
+        expect(preset(null, { modules: 'cjs', dynamicImport: true })).toMatchSnapshot();
+        expect(preset(null, { modules: false, dynamicImport: true })).toMatchSnapshot();
+        expect(preset(null, { modules: 'foo', dynamicImport: true })).toMatchSnapshot();
+
+        expect(preset(null, { modules: 'commonjs', dynamicImport: false })).toMatchSnapshot();
+        expect(preset(null, { modules: 'cjs', dynamicImport: false })).toMatchSnapshot();
+        expect(preset(null, { modules: false, dynamicImport: false })).toMatchSnapshot();
+        expect(preset(null, { modules: 'foo', dynamicImport: true })).toMatchSnapshot();
+    });
+});
+
+describe('functional', () => {
+    describe('class-properties', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                    class Bork {
+                        static a = 'foo';
+                        static b;
+                    
+                        x = 'bar';
+                        y;
+                    }
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
     });
 });
