@@ -1,0 +1,687 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dynamicImport should take into consideration options.dynamicImport 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`env should take into consideration process.env.NODE_ENV 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-source/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-self/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`env should take into consideration process.env.NODE_ENV 2`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
+      Object {
+        "removeImport": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`lodash should pass any options to the lodash plugin 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+          "recompose",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`modules should set modules to false by default if BABEL_ENV is es 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`modules should set modules to false if options.modules is disabled 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`react should enable react optimizations if options.env is production 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
+      Object {
+        "removeImport": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`react should enable react plugins if options.react is enabled and enable development goodies 1`] = `
+Object {
+  "plugins": Array [
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-jsx/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`should have the right config with the default options 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`targets should allow overriding options.targets with an object 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "node": "current",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`targets should return a config for browsers if options.targets is set to browsers 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`targets should return a config for node if options.targets is set to node 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`targets should return a default config that target browsers and node 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+      Object {
+        "useBuiltIns": true,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "loose": true,
+        "modules": "commonjs",
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+}
+`;
