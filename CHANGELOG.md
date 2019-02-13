@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.5...v3.0.0) (2019-02-13)
+
+
+### Features
+
+* upgrade to babel 7 ([#39](https://github.com/moxystudio/babel-preset-moxy/issues/39)) ([5ad75f1](https://github.com/moxystudio/babel-preset-moxy/commit/5ad75f1)), closes [#26](https://github.com/moxystudio/babel-preset-moxy/issues/26)
+
+
+### BREAKING CHANGES
+
+* the way the preset is configured has changed
+
+
+
 <a name="2.3.5"></a>
 ## [2.3.5](https://github.com/moxystudio/babel-preset-moxy/compare/v2.3.4...v2.3.5) (2018-09-11)
 
