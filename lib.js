@@ -32,12 +32,10 @@ module.exports = (context, options) => {
         config.plugins.push(`@babel/plugin-${moduleTransformations[options.modules]}`);
     }
 
-    // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
+    // The plugins bellow activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
-        require.resolve('@babel/plugin-proposal-class-properties'),
-        // Support destructuring of objects, e.g.: { ...foo }
-        [require.resolve('@babel/plugin-proposal-object-rest-spread'), { useBuiltIns: true }]
+        require.resolve('@babel/plugin-proposal-class-properties')
     );
 
     // Adds dynamic import support
@@ -47,7 +45,7 @@ module.exports = (context, options) => {
 
     // Add react support without doing any development or production transformations
     if (options.react) {
-        addReactSupport(config);
+        addReactSupport(config, null);
     }
 
     // Cherry-pick lodash modules for smaller bundles

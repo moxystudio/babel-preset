@@ -1,9 +1,16 @@
 'use strict';
 
+const babelCore = require('@babel/core');
 const serializerPath = require('jest-serializer-path');
 const preset = require('../lib');
 
+const env = process.env.NODE_ENV;
+
 expect.addSnapshotSerializer(serializerPath);
+
+afterEach(() => {
+    process.env.NODE_ENV = env;
+});
 
 it('should have the right config with the default options', () => {
     expect(preset()).toMatchSnapshot();
@@ -85,5 +92,23 @@ describe('dynamicImport', () => {
         expect(preset(null, { modules: 'cjs', dynamicImport: false })).toMatchSnapshot();
         expect(preset(null, { modules: false, dynamicImport: false })).toMatchSnapshot();
         expect(preset(null, { modules: 'foo', dynamicImport: true })).toMatchSnapshot();
+    });
+});
+
+describe('functional', () => {
+    describe('class-properties', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                    class Bork {
+                        static a = 'foo';
+                        static b;
+                    
+                        x = 'bar';
+                        y;
+                    }
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
     });
 });

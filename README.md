@@ -36,9 +36,8 @@ $ npm install babel-jest --save-dev
 
 Projects developed at MOXY often use new JavaScript language features that may not be supported in the targets they will run. This preset provides a shareable Babel config that:
 
-- Compiles ES6+ down to ES5 based on targets (browsers/node) by using [preset-env](https://www.npmjs.com/package/babel-preset-env)
+- Allows you to use the latest JavaScript features and transpile only what is not already supported by your targets, thanks to [preset-env](https://www.npmjs.com/package/babel-preset-env)
 - Enables [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
-- Enables [object-rest-spread](https://www.npmjs.com/package/@babel/plugin-proposal-object-rest-spread)
 - Optionally enables React, transforming JSX to standard JavaScript
 - Uses [add-module-exports](https://www.npmjs.com/package/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212)
 - Enables [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash)

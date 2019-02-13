@@ -35,14 +35,14 @@ module.exports = (context, options) => {
             options.targets.indexOf('node') !== -1 ? { node: '8.9' } : {},
             options.targets.indexOf('browsers') !== -1 ? { browsers: ['extends browserslist-config-google'] } : {}
         ) : options.targets,
+        // Enables support for builtin/feature proposals that have native support by the defined target environments
+        shippedProposals: true,
     }]);
 
-    // The two plugins above activate stage 3 features that babel hasn't added to the stage 3 preset yet
+    // The plugins bellow activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
-        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
-        // Support destructuring of objects, e.g.: { ...foo }
-        [require.resolve('@babel/plugin-proposal-object-rest-spread'), { useBuiltIns: true }]
+        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
     );
 
     // Adds dynamic import support

@@ -5,12 +5,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -34,12 +28,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -61,12 +49,6 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -89,12 +71,6 @@ Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
     Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -115,12 +91,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -144,12 +114,6 @@ Object {
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
     Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -169,12 +133,6 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -196,12 +154,6 @@ Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
     Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -217,17 +169,30 @@ Object {
 }
 `;
 
+exports[`functional class-properties should handle correctly 1`] = `
+"\\"use strict\\";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+class Bork {
+  constructor() {
+    _defineProperty(this, \\"x\\", 'bar');
+
+    _defineProperty(this, \\"y\\", void 0);
+  }
+
+}
+
+_defineProperty(Bork, \\"a\\", 'foo');
+
+_defineProperty(Bork, \\"b\\", void 0);"
+`;
+
 exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
 Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     "babel-plugin-add-module-exports",
   ],
@@ -240,12 +205,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -269,12 +228,6 @@ exports[`modules should set modules to false by default if BABEL_ENV is es 1`] =
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -296,12 +249,6 @@ exports[`modules should set modules to false if options.modules is disabled 1`] 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -324,12 +271,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -353,12 +294,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -382,12 +317,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -410,12 +339,6 @@ exports[`namedDefaultExport & babel-plugin-add-module-exports should not enable 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -438,12 +361,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -467,12 +384,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -496,12 +407,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -525,12 +430,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -553,12 +452,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -581,12 +474,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -617,12 +504,6 @@ Object {
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -654,12 +535,6 @@ Object {
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -683,12 +558,6 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",

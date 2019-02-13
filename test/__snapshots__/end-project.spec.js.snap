@@ -10,12 +10,6 @@ Object {
       },
     ],
     Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
-    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -33,6 +27,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -63,12 +58,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-source/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-self/lib/index.js",
@@ -90,6 +79,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -120,12 +110,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
@@ -151,6 +135,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -164,6 +149,35 @@ Object {
 }
 `;
 
+exports[`functional class-properties should handle correctly 1`] = `
+"\\"use strict\\";
+
+var Bork = function Bork() {
+  this.x = 'bar';
+  this.y = void 0;
+};
+
+Bork.a = 'foo';
+Bork.b = void 0;"
+`;
+
+exports[`functional object-rest-spread should handle correctly 1`] = `
+"\\"use strict\\";
+
+var z = Object.assign({
+  x: x
+}, y);"
+`;
+
+exports[`functional object-rest-spread should handle correctly for target with support 1`] = `
+"\\"use strict\\";
+
+var z = {
+  x,
+  ...y
+};"
+`;
+
 exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
 Object {
   "plugins": Array [
@@ -171,12 +185,6 @@ Object {
       "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
       Object {
         "loose": true,
-      },
-    ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
       },
     ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
@@ -187,6 +195,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -209,12 +218,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -235,6 +238,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -257,12 +261,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -282,6 +280,7 @@ Object {
       Object {
         "loose": true,
         "modules": false,
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -304,12 +303,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -329,6 +322,7 @@ Object {
       Object {
         "loose": true,
         "modules": false,
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -359,12 +353,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
@@ -390,6 +378,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -420,12 +409,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -445,6 +428,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -467,12 +451,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -492,6 +470,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -514,12 +493,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -539,6 +512,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "node": "current",
         },
@@ -558,12 +532,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -583,6 +551,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",
@@ -604,12 +573,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -629,6 +592,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "node": "8.9",
         },
@@ -648,12 +612,6 @@ Object {
         "loose": true,
       },
     ],
-    Array [
-      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-      Object {
-        "useBuiltIns": true,
-      },
-    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -673,6 +631,7 @@ Object {
       Object {
         "loose": true,
         "modules": "commonjs",
+        "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
             "extends browserslist-config-google",

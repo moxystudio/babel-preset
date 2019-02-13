@@ -1,9 +1,16 @@
 'use strict';
 
+const babelCore = require('@babel/core');
 const serializerPath = require('jest-serializer-path');
 const preset = require('../end-project');
 
+const env = process.env.NODE_ENV;
+
 expect.addSnapshotSerializer(serializerPath);
+
+afterEach(() => {
+    process.env.NODE_ENV = env;
+});
 
 it('should have the right config with the default options', () => {
     expect(preset()).toMatchSnapshot();
@@ -75,5 +82,45 @@ describe('env', () => {
 describe('dynamicImport', () => {
     it('should take into consideration options.dynamicImport', () => {
         expect(preset(null, { dynamicImport: false })).toMatchSnapshot();
+    });
+});
+
+describe('functional', () => {
+    describe('object-rest-spread', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                    var z = { x, ...y };
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
+
+        it('should handle correctly for target with support', () => {
+            const targets = {
+                chrome: '60',
+            };
+
+            expect(
+                babelCore.transform(`
+                    var z = { x, ...y };
+                `, preset(null, { targets })).code
+            ).toMatchSnapshot();
+        });
+    });
+
+    describe('class-properties', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                    class Bork {
+                        static a = 'foo';
+                        static b;
+                    
+                        x = 'bar';
+                        y;
+                    }
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
     });
 });
