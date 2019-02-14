@@ -76,7 +76,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
     ```json
     {
-        "presets": ["moxy/<preset-type>"]
+        "presets": ["babel-preset-moxy/<preset-type>"]
     }
     ```
 
@@ -84,7 +84,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
     ```json
     {
-        "presets": [["moxy/<preset-type>", { "react": true }]]
+        "presets": [["babel-preset-moxy/<preset-type>", { "react": true }]]
     }
     ```
 
@@ -176,7 +176,7 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
 ```json
 {
     "presets": [
-        ["moxy", {
+        ["babel-preset-moxy/<preset-type>", {
             "lodash": { "id": ["recompose"] }
         }],
     ],

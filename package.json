@@ -18,7 +18,8 @@
   "license": "MIT",
   "files": [
     "end-project.js",
-    "lib.js"
+    "lib.js",
+    "lib"
   ],
   "scripts": {
     "lint": "eslint .",
