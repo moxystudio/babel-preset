@@ -36,11 +36,11 @@ $ npm install babel-jest --save-dev
 
 Projects developed at MOXY often use new JavaScript language features that may not be supported in the targets they will run. This preset provides a shareable Babel config that:
 
-- Allows you to use the latest JavaScript features and transpile only what is not already supported by your targets, thanks to [preset-env](https://www.npmjs.com/package/babel-preset-env)
-- Enables [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+- Allows you to use the latest JavaScript features and transpile only what is not already supported by your targets, thanks to [`preset-env`](https://www.npmjs.com/package/babel-preset-env)
+- Enables [`class-properties`](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
 - Optionally enables React, transforming JSX to standard JavaScript
-- Uses [add-module-exports](https://www.npmjs.com/package/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212)
-- Enables [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash)
+- Uses [`add-module-exports`](https://www.npmjs.com/package/babel-plugin-add-module-exports) to get around [babel#2212](https://github.com/babel/babel/issues/2212)
+- Enables [`babel-plugin-lodash`](https://www.npmjs.com/package/babel-plugin-lodash)
 
 
 ## Do I need to transpile?
@@ -72,7 +72,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
 > If you don't use a bundler within your project, this is the setup guide you should follow
 
-- Create `.babelrc` at the root of your project, replacing `preset-type` with the preset type you chose:
+- Create `.babelrc` at the root of your project, replacing `<preset-type>` with the preset type you chose:
 
     ```json
     {
@@ -88,7 +88,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
     }
     ```
 
-- Install [@babel/cli](https://www.npmjs.com/package/@babel/cli) as a dev dependency because we will need it for the build script:
+- Install [`@babel/cli`](https://www.npmjs.com/package/@babel/cli) as a dev dependency because we will need it for the build script:
 
     ```ssh
     $ npm install @babel/cli --save-dev
@@ -126,7 +126,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
 #### Webpack based project
 
-Tweak your Webpack config JavaScript rule like so:
+Tweak your Webpack config JavaScript rule to include [`babel-loader`](https://www.npmjs.com/package/babel-loader) and MOXY's preset. Here's an example for a website project using React:
 
 ```js
 {
@@ -137,15 +137,15 @@ Tweak your Webpack config JavaScript rule like so:
             options: {
                 cacheDirectory: true,  // Improve performance
                 presets: [
-                    [require.resolve('babel-preset-moxy'), {
+                    [require.resolve('babel-preset-moxy/end-proect'), {
                         targets: ['browsers'],
                         react: true,
                         modules: false,
                     }],
-                ]
+                ],
             },
         },
-    ]
+    ],
 }
 ```
 
@@ -159,7 +159,7 @@ Below, you may find a list containing all options you may tweak:
 | ------ | ------------- | -------- | ------- | ------------ | ------------ |
 | react | Adds support for [React](https://reactjs.org/) | boolean | false | ✅ | ✅ |
 | lodash | Transform to cherry-pick Lodash modules | boolean/[Object](https://github.com/lodash/babel-plugin-lodash#usage) | true | ✅ | ✅ |
-| modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV` | ✅ | ✅ |
+| modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV`, `commonjs` if unspecified | ✅ | ✅ |
 | dynamicImport | Adds support for `import()` statements | boolean | true | ✅ | ✅ |
 | targets | The output targets, see bellow for a more detailed explanation | Array/[Object](https://babeljs.io/docs/en/next/babel-preset-env.html#targets) | ['browsers', 'node'] | ❌ | ✅ |
 | env | The environment (`development`, `production` or `test`) | string | Based on `process.env.NODE_ENV` | ❌ | ✅ |
@@ -178,8 +178,8 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
     "presets": [
         ["moxy", {
             "lodash": { "id": ["recompose"] }
-        }]
-    ]
+        }],
+    ],
 }
 ```
 
@@ -193,7 +193,7 @@ If your project has different requirements in terms of browser or node support, 
 
 #### `dynamicImport` option
 
-Dynamic imports are supported but are dependent on the `modules` option. More specifically, the [syntax-dynamic-import](https://www.npmjs.com/package/@babel/plugin-syntax-dynamic-import) and [dynamic-import-node](https://www.npmjs.com/package/babel-plugin-transform-dynamic-import) when the `modules` option is set to `false` and `commonjs` respectively.
+Dynamic imports support are enabled by default but are dependent on the `modules` option. More specifically, the [`syntax-dynamic-import`](https://www.npmjs.com/package/@babel/plugin-syntax-dynamic-import) and [`dynamic-import-node`](https://www.npmjs.com/package/babel-plugin-transform-dynamic-import) when the `modules` option is set to `false` and `commonjs` respectively.
 
 For other `modules` types, such as `amd`, you must find and include a plugin yourself. Also, you may disable the `dynamicImport` option by setting it to `false` in case you want to disable the feature completely or if you want to choose another plugin.
 
@@ -217,9 +217,9 @@ No, seriously. Read the [Caveats](#caveats) section as it contains crucial infor
 
 Shipping polyfills in libraries is, in general, a bad practice because it increases the overall file size of your top-level project due to duplication.
 
-The [transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) plugin attempts to solve the polyfills and duplication by transforming `Object.assign`, `Promise` and other features to their [core-js](https://github.com/zloirock/core-js) counter-parts. Though, this doesn't play well with [preset-env](https://github.com/babel/babel-preset-env/tree/1.x/) because it inlines everything, including features that are already supported by our targets. Additionally, if different versions of the runtime are installed, duplication still happens.
+The [`transform-runtime`](https://www.npmjs.com/package/babel-plugin-transform-runtime) plugin attempts to solve the polyfills and duplication by transforming `Object.assign`, `Promise` and other features to their [`core-js`](https://github.com/zloirock/core-js) counter-parts. Though, this doesn't play well with [`preset-env`](https://github.com/babel/babel-preset-env/tree/1.x/) because it inlines everything, including features that are already supported by our targets. Additionally, if different versions of the runtime are installed, duplication still happens.
 
-For this reason, you, as an author, should state in the README of your library that you expect the environment to be polyfilled with [core-js](https://github.com/zloirock/core-js), [babel-polyfill](https://babeljs.io/docs/usage/polyfill/), [polyfill.io](https://polyfill.io/) or similar.
+For this reason, you, as an author, should state in the README of your library that you expect the environment to be polyfilled with [`core-js`](https://github.com/zloirock/core-js), [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/), [`polyfill.io`](https://polyfill.io/) or similar.
 
 #### In top-level projects
 
@@ -236,7 +236,7 @@ import 'core-js/modules/es6.promise';
 ```
 
 Note that if you are only targeting environments that already support `async await` natively, such as Nodejs >= v8, the `regenerator-runtime` won't be installed automatically. This is fine, except if use a dependency that rely on the `regeneratorRuntime` global.
-To get around this, you must have `regenerator-runtime/runtime` required at the top of your main app file. Alternatively, if you use Webpack, you may use the [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) as follows:
+To get around this, you must have `regenerator-runtime/runtime` required at the top of your main app file. Alternatively, if you use Webpack, you may use the [`ProvidePlugin`](https://webpack.js.org/plugins/provide-plugin/) as follows:
 
 ```js
 {
@@ -244,24 +244,23 @@ To get around this, you must have `regenerator-runtime/runtime` required at the 
         new ProvidePlugin({
             regeneratorRuntime: require.resolve('regenerator-runtime'),
         }),
-    ]
+    ],
 }
 ```
 
 ### Dynamic imports
 
-To enable [syntax-dynamic-import](https://www.npmjs.com/package/@babel/plugin-syntax-dynamic-import) or [dynamic-import-node](https://www.npmjs.com/package/babel-plugin-transform-dynamic-import) please follow the instructions detailed previously in the [`dynamicImport` option](#dynamicImport).
+The support for dynamic imports is enabled by default, please read more on the [`dynamicImport` option](#dynamicImport).
 
-
-The caveat is that `@babel/preset-env` is unaware that using `import()` with Webpack relies on Promise internally. Environments which do not have builtin support for Promise, like Internet Explorer, will require both the promise and iterator polyfills be added manually. Having said that, tweak your top-level project's Webpack config like so:
+The caveat is that [`preset-env`](https://www.npmjs.com/package/babel-preset-env) is unaware that using `import()` with Webpack relies on Promise internally. Environments which do not have builtin support for Promise, like Internet Explorer, will require both the promise and iterator polyfills be added manually. Having said that, tweak your top-level project's Webpack config like so:
 
 ```js
 {
-  entry: [
-    'core-js/modules/es6.promise',
-    'core-js/modules/es6.array.iterator',
-    // Path to your entry file
-  ],
+    entry: [
+        'core-js/modules/es6.promise',
+        'core-js/modules/es6.array.iterator',
+        // Path to your entry file
+    ],
 };
 ```
 
