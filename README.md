@@ -121,6 +121,9 @@ The way Babel is configured depends on the the tooling you are using. Below, the
       "build": "BABEL_ENV=es babel src -d es"
     }
     ```
+- Tweak your `.gitignore` file:
+
+   Add `lib/` and/or `es/` folder to the gitignore file so that those output folders are never committed.
 
 - Create `src/index.js` and happy coding!
 
