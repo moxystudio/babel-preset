@@ -10,6 +10,16 @@ Object {
       },
     ],
     Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
+    Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
         "id": Array [
@@ -25,6 +35,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -58,6 +69,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-source/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-jsx-self/lib/index.js",
@@ -77,6 +98,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -110,6 +132,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
@@ -133,6 +165,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -187,12 +220,23 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
   ],
   "presets": Array [
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -218,6 +262,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -236,6 +290,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -261,6 +316,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": true,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -278,6 +343,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": false,
         "shippedProposals": true,
@@ -303,6 +369,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": true,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -320,6 +396,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": false,
         "shippedProposals": true,
@@ -353,6 +430,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/lib/index.js",
@@ -376,6 +463,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -409,6 +497,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -426,6 +524,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -451,6 +550,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -468,6 +577,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -493,6 +603,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -510,6 +630,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -532,6 +653,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -549,6 +680,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -573,6 +705,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -590,6 +732,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,
@@ -612,6 +755,16 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -629,6 +782,7 @@ Object {
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
       Object {
+        "corejs": 3,
         "loose": true,
         "modules": "commonjs",
         "shippedProposals": true,

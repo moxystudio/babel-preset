@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const addDynamicImportSupport = require('./lib/dynamic-import');
 const addReactSupport = require('./lib/react');
 const addLodashSupport = require('./lib/lodash');
@@ -22,6 +23,8 @@ module.exports = (context, options) => {
     // The `preset-env` will activate the necessary features based on our targets
     // It's no longer necessary to add `es2015`, `es2016`, etc manually
     config.presets.push([require.resolve('@babel/preset-env'), {
+        // This is required to suppress a warning in newer versions of babel
+        corejs: 3,
         // Replaces `import 'babel-polyfill';` with only the polyfills that are
         // actually required based on the targets
         useBuiltIns: 'entry',
@@ -44,6 +47,19 @@ module.exports = (context, options) => {
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
         [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
     );
+
+    config.plugins.push(['@babel/plugin-transform-runtime', {
+        // We already have preset-env injecting the core-js polyfills automatically
+        corejs: false,
+        // Do not replace babel helpers with calls to moduleName
+        helpers: false,
+        // Automatically requires @babel/runtime/regenerator and avoid
+        regenerator: true,
+        // Choose whether to use ESModules or commonjs depending of the env
+        useESModules: options.modules !== 'commonjs',
+        // Use the @babel/runtime this package depends on
+        absoluteRuntime: path.dirname(require.resolve('@babel/runtime/package.json')),
+    }]);
 
     // Adds dynamic import support
     if (options.dynamicImport) {
