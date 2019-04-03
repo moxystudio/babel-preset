@@ -23,7 +23,7 @@ module.exports = (context, options) => {
     // The `preset-env` will activate the necessary features based on our targets
     // It's no longer necessary to add `es2015`, `es2016`, etc manually
     config.presets.push([require.resolve('@babel/preset-env'), {
-        // This is required to suppress a warning in newer versions of babel
+        // This is required to suppress a warning in newer versions of @babel/preset-env
         corejs: 3,
         // Replaces `import 'babel-polyfill';` with only the polyfills that are
         // actually required based on the targets
