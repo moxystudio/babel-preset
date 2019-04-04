@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.5"></a>
+## [3.0.5](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.4...v3.0.5) (2019-04-04)
+
+
+### Bug Fixes
+
+* add the runtime transform plugin to end project ([#42](https://github.com/moxystudio/babel-preset-moxy/issues/42)) ([8127ae7](https://github.com/moxystudio/babel-preset-moxy/commit/8127ae7))
+
+
+
 <a name="3.0.4"></a>
 ## [3.0.4](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.3...v3.0.4) (2019-02-14)
 
