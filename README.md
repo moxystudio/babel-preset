@@ -102,8 +102,8 @@ The way Babel is configured depends on the the tooling you are using. Below, the
       "es"
     ],
     "scripts": {
-      "build:commonjs": "BABEL_ENV=commonjs babel src -d lib --delete-dir-on-star",
-      "build:es": "BABEL_ENV=es babel src -d es --delete-dir-on-star",
+      "build:commonjs": "BABEL_ENV=commonjs babel src -d lib --delete-dir-on-start",
+      "build:es": "BABEL_ENV=es babel src -d es --delete-dir-on-start",
       "build": "npm run build:commonjs && npm run build:es"
     }
     ```
