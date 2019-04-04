@@ -53,7 +53,7 @@ module.exports = (context, options) => {
         corejs: false,
         // Do not replace babel helpers with calls to moduleName
         helpers: false,
-        // Automatically requires @babel/runtime/regenerator and avoid
+        // Add import calls whenever generatorRuntime global is found
         regenerator: true,
         // Choose whether to use ESModules or commonjs depending of the env
         useESModules: options.modules !== 'commonjs',
