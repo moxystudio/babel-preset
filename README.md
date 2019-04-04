@@ -236,19 +236,6 @@ import 'core-js/modules/es6.promise';
 // ...
 ```
 
-Note that if you are only targeting environments that already support `async await` natively, such as Nodejs >= v8, the `regenerator-runtime` won't be installed automatically. This is fine, except if use a dependency that rely on the `regeneratorRuntime` global.
-To get around this, you must have `regenerator-runtime/runtime` required at the top of your main app file. Alternatively, if you use Webpack, you may use the [`ProvidePlugin`](https://webpack.js.org/plugins/provide-plugin/) as follows:
-
-```js
-{
-    plugins: [
-        new ProvidePlugin({
-            regeneratorRuntime: require.resolve('regenerator-runtime'),
-        }),
-    ],
-}
-```
-
 ### Dynamic imports
 
 The support for dynamic imports is enabled by default, please read more on the [`dynamicImport` option](#dynamicImport).
