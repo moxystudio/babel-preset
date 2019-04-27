@@ -16,6 +16,7 @@ module.exports = (context, options) => {
     }, options);
 
     const config = {
+        sourceType: 'unambiguous',
         presets: [],
         plugins: [],
     };

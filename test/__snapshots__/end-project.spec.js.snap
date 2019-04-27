@@ -49,6 +49,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -112,6 +113,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -179,13 +181,14 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
 exports[`functional class-properties should handle correctly 1`] = `
-"\\"use strict\\";
+"var Bork = function Bork() {
+  \\"use strict\\";
 
-var Bork = function Bork() {
   this.x = 'bar';
   this.y = void 0;
 };
@@ -195,17 +198,13 @@ Bork.b = void 0;"
 `;
 
 exports[`functional object-rest-spread should handle correctly 1`] = `
-"\\"use strict\\";
-
-var z = Object.assign({
+"var z = Object.assign({
   x: x
 }, y);"
 `;
 
 exports[`functional object-rest-spread should handle correctly for target with support 1`] = `
-"\\"use strict\\";
-
-var z = {
+"var z = {
   x,
   ...y
 };"
@@ -250,6 +249,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -304,6 +304,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -357,6 +358,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -410,6 +412,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -477,6 +480,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -538,6 +542,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -591,6 +596,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -641,6 +647,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -693,6 +700,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -743,6 +751,7 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
 
@@ -796,5 +805,6 @@ Object {
       },
     ],
   ],
+  "sourceType": "unambiguous",
 }
 `;
