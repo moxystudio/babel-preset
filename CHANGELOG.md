@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.6"></a>
+## [3.0.6](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.5...v3.0.6) (2019-04-29)
+
+
+### Bug Fixes
+
+* add sourceType also to lib ([4b1cf95](https://github.com/moxystudio/babel-preset-moxy/commit/4b1cf95))
+* set sourceType to unambiguous to properly compile deps ([b32f8c6](https://github.com/moxystudio/babel-preset-moxy/commit/b32f8c6))
+
+
+
 <a name="3.0.5"></a>
 ## [3.0.5](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.4...v3.0.5) (2019-04-04)
 
