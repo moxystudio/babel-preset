@@ -13,6 +13,7 @@ module.exports = (context, options) => {
         modules: process.env.BABEL_ENV === 'es' ? false : 'commonjs', // Usually set to `commonjs` or `false`
         namedDefaultExport: null,
     }, options);
+
     if (options.modules !== 'commonjs' && options.modules !== 'cjs' && options.namedDefaultExport) {
         throw new Error('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
     }
@@ -23,6 +24,7 @@ module.exports = (context, options) => {
     }
 
     const config = {
+        sourceType: 'unambiguous',
         presets: [],
         plugins: [],
     };
