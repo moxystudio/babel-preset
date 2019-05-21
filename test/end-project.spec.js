@@ -32,6 +32,12 @@ describe('modules', () => {
     });
 });
 
+describe('loose', () => {
+    it('should disable loose if options.loose is disabled', () => {
+        expect(preset(null, { loose: true })).toMatchSnapshot();
+    });
+});
+
 describe('react', () => {
     it('should enable react plugins if options.react is enabled and enable development goodies', () => {
         expect(preset(null, { react: true })).toMatchSnapshot();

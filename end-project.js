@@ -7,6 +7,7 @@ const addLodashSupport = require('./lib/lodash');
 
 module.exports = (context, options) => {
     options = Object.assign({
+        loose: true,
         react: false,
         lodash: true,
         dynamicImport: true,
@@ -30,7 +31,7 @@ module.exports = (context, options) => {
         // actually required based on the targets
         useBuiltIns: 'entry',
         // Produce less and more readable code (although not as faithful to the semantics)
-        loose: true,
+        loose: options.loose,
         // Set modules options
         modules: options.modules,
         // Set the browser support to be the same used by Google (https://www.npmjs.com/package/browserslist-config-google)
@@ -46,7 +47,7 @@ module.exports = (context, options) => {
     // The plugins bellow activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
-        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
+        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: options.loose }]
     );
 
     config.plugins.push(['@babel/plugin-transform-runtime', {

@@ -308,6 +308,60 @@ Object {
 }
 `;
 
+exports[`loose should disable loose if options.loose is disabled 1`] = `
+Object {
+  "plugins": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+      Object {
+        "loose": true,
+      },
+    ],
+    Array [
+      "@babel/plugin-transform-runtime",
+      Object {
+        "absoluteRuntime": "<PROJECT_ROOT>/node_modules/@babel/runtime",
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false,
+      },
+    ],
+    "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
+    Array [
+      "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
+      Object {
+        "id": Array [
+          "lodash",
+          "lodash-es",
+          "lodash-compat",
+          "lodash/fp",
+        ],
+      },
+    ],
+  ],
+  "presets": Array [
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/preset-env/lib/index.js",
+      Object {
+        "corejs": 3,
+        "loose": true,
+        "modules": "commonjs",
+        "shippedProposals": true,
+        "targets": Object {
+          "browsers": Array [
+            "extends browserslist-config-google",
+          ],
+          "node": "8.9",
+        },
+        "useBuiltIns": "entry",
+      },
+    ],
+  ],
+  "sourceType": "unambiguous",
+}
+`;
+
 exports[`modules should set modules to false by default if BABEL_ENV is es 1`] = `
 Object {
   "plugins": Array [
