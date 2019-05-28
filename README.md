@@ -162,6 +162,7 @@ Below, you may find a list containing all options you may tweak:
 | lodash | Transform to cherry-pick Lodash modules | boolean/[Object](https://github.com/lodash/babel-plugin-lodash#usage) | true | ✅ | ✅ |
 | modules | Transform ES6 module syntax to another module type | [string/boolean](https://www.npmjs.com/package/babel-preset-env#modules) | Based on `process.env.BABEL_ENV`, `commonjs` if unspecified | ✅ | ✅ |
 | dynamicImport | Adds support for `import()` statements | boolean | true | ✅ | ✅ |
+| loose | Enable "loose" transformations for any plugins that allow them | boolean | true | ❌ | ✅ |
 | targets | The output targets, see bellow for a more detailed explanation | Array/[Object](https://babeljs.io/docs/en/next/babel-preset-env.html#targets) | ['browsers', 'node'] | ❌ | ✅ |
 | env | The environment (`development`, `production` or `test`) | string | Based on `process.env.NODE_ENV` | ❌ | ✅ |
 | namedDefaultExport | Use [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports) plugin to get around [babel/babel#2212](https://github.com/babel/babel/issues/2212) | boolean | true if modules is `commonjs` | ✅ | ❌ |
