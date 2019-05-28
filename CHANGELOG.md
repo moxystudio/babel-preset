@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.6...v3.1.0) (2019-05-28)
+
+
+### Features
+
+* enable loose option ([#44](https://github.com/moxystudio/babel-preset-moxy/issues/44)) ([9b4afe1](https://github.com/moxystudio/babel-preset-moxy/commit/9b4afe1))
+
+
+
 <a name="3.0.6"></a>
 ## [3.0.6](https://github.com/moxystudio/babel-preset-moxy/compare/v3.0.5...v3.0.6) (2019-04-29)
 

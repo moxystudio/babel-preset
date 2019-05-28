@@ -1,7 +1,7 @@
 {
   "name": "babel-preset-moxy",
   "description": "Babel preset to be used at MOXY",
-  "version": "3.0.6",
+  "version": "3.1.0",
   "keywords": [
     "babel",
     "preset",
