@@ -44,7 +44,7 @@ module.exports = (context, options) => {
         shippedProposals: true,
     }]);
 
-    // The plugins bellow activate stage 3 features that babel hasn't added to the stage 3 preset yet
+    // The plugins below activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
         [require.resolve('@babel/plugin-proposal-class-properties'), { loose: options.loose }],
