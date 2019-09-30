@@ -9,6 +9,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -70,6 +72,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -134,6 +138,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -197,6 +203,12 @@ Bork.a = 'foo';
 Bork.b = void 0;"
 `;
 
+exports[`functional nullish-coalescing-operator should handle correctly 1`] = `
+"var _object$foo;
+
+var foo = (_object$foo = object.foo) !== null && _object$foo !== void 0 ? _object$foo : 'bar';"
+`;
+
 exports[`functional object-rest-spread should handle correctly 1`] = `
 "var z = Object.assign({
   x: x
@@ -210,6 +222,19 @@ exports[`functional object-rest-spread should handle correctly for target with s
 };"
 `;
 
+exports[`functional optional-chaining should handle correctly 1`] = `
+"var _obj$foo, _obj$foo$bar;
+
+var obj = {
+  foo: {
+    bar: {
+      baz: 42
+    }
+  }
+};
+var baz = obj === null || obj === void 0 ? void 0 : (_obj$foo = obj.foo) === null || _obj$foo === void 0 ? void 0 : (_obj$foo$bar = _obj$foo.bar) === null || _obj$foo$bar === void 0 ? void 0 : _obj$foo$bar.baz;"
+`;
+
 exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
 Object {
   "plugins": Array [
@@ -219,6 +244,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -262,6 +289,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -317,6 +346,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -371,6 +402,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -425,6 +458,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -487,6 +522,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -555,6 +592,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -609,6 +648,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -663,6 +704,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -714,6 +757,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -767,6 +812,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {
@@ -818,6 +865,8 @@ Object {
         "loose": true,
       },
     ],
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "@babel/plugin-transform-runtime",
       Object {

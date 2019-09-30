@@ -47,7 +47,11 @@ module.exports = (context, options) => {
     // The plugins bellow activate stage 3 features that babel hasn't added to the stage 3 preset yet
     config.plugins.push(
         // Allows class { handleClick = () => { } static propTypes = { foo: PropTypes.string } }
-        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: options.loose }]
+        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: options.loose }],
+        // Allows obj?.x?.y?.z
+        require.resolve('@babel/plugin-proposal-optional-chaining'),
+        // Allows object.foo ?? 'bar'
+        require.resolve('@babel/plugin-proposal-nullish-coalescing-operator')
     );
 
     config.plugins.push(['@babel/plugin-transform-runtime', {

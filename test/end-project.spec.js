@@ -129,4 +129,32 @@ describe('functional', () => {
             ).toMatchSnapshot();
         });
     });
+
+    describe('optional-chaining', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                const obj = {
+                    foo: {
+                      bar: {
+                        baz: 42,
+                      },
+                    },
+                };
+                  
+                const baz = obj?.foo?.bar?.baz;
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
+    });
+
+    describe('nullish-coalescing-operator', () => {
+        it('should handle correctly', () => {
+            expect(
+                babelCore.transform(`
+                const foo = object.foo ?? 'bar';
+                `, preset()).code
+            ).toMatchSnapshot();
+        });
+    });
 });
