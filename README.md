@@ -1,18 +1,18 @@
-# babel-preset-moxy
+# babel-preset
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-[npm-url]:https://npmjs.org/package/babel-preset-moxy
-[npm-image]:http://img.shields.io/npm/v/babel-preset-moxy.svg
-[downloads-image]:http://img.shields.io/npm/dm/babel-preset-moxy.svg
-[travis-url]:https://travis-ci.org/moxystudio/babel-preset-moxy
-[travis-image]:http://img.shields.io/travis/moxystudio/babel-preset-moxy/master.svg
-[codecov-url]:https://codecov.io/gh/moxystudio/babel-preset-moxy
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/babel-preset-moxy/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/babel-preset-moxy
-[david-dm-image]:https://img.shields.io/david/moxystudio/babel-preset-moxy.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/babel-preset-moxy?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/babel-preset-moxy.svg
+[npm-url]:https://npmjs.org/package/@moxy/babel-preset
+[npm-image]:http://img.shields.io/npm/v/@moxy/babel-preset.svg
+[downloads-image]:http://img.shields.io/npm/dm/@moxy/babel-preset.svg
+[travis-url]:https://travis-ci.org/moxystudio/babel-preset
+[travis-image]:http://img.shields.io/travis/moxystudio/babel-preset/master.svg
+[codecov-url]:https://codecov.io/gh/moxystudio/babel-preset
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/babel-preset/master.svg
+[david-dm-url]:https://david-dm.org/moxystudio/babel-preset
+[david-dm-image]:https://img.shields.io/david/moxystudio/babel-preset.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/babel-preset?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/babel-preset.svg
 
 [Babel](https://babeljs.io/) preset to be used at MOXY.
 
@@ -20,7 +20,7 @@
 ## Installation
 
 ```ssh
-$ npm install babel-preset-moxy @babel/core --save-dev
+$ npm install @moxy/babel-preset @babel/core --save-dev
 ```
 
 If you are using Jest for testing, you also need to install [`babel-jest`](https://github.com/facebook/jest/tree/master/packages/babel-jest):
@@ -74,7 +74,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
     ```json
     {
-        "presets": ["babel-preset-moxy/<preset-type>"]
+        "presets": ["@moxy/babel-preset/<preset-type>"]
     }
     ```
 
@@ -82,7 +82,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
     ```json
     {
-        "presets": [["babel-preset-moxy/<preset-type>", { "react": true }]]
+        "presets": [["@moxy/babel-preset/<preset-type>", { "react": true }]]
     }
     ```
 
@@ -138,7 +138,7 @@ Tweak your Webpack config JavaScript rule to include [`babel-loader`](https://ww
             options: {
                 cacheDirectory: true,  // Improve performance
                 presets: [
-                    [require.resolve('babel-preset-moxy/end-proect'), {
+                    [require.resolve('@moxy/babel-preset/end-proect'), {
                         targets: ['browsers'],
                         react: true,
                         modules: false,
@@ -178,7 +178,7 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
 ```json
 {
     "presets": [
-        ["babel-preset-moxy/<preset-type>", {
+        ["@moxy/babel-preset/<preset-type>", {
             "lodash": { "id": ["recompose"] }
         }],
     ],
