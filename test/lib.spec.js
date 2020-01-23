@@ -77,7 +77,7 @@ describe('namedDefaultExport & babel-plugin-add-module-exports', () => {
 
     it('should throw when enabling options.namedDefaultExport and options.modules is not commonjs', () => {
         expect(() => preset(null, { modules: false, namedDefaultExport: true }))
-        .toThrow('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
+            .toThrow('The `namedDefaultExport` option can only be enabled when `modules` is commonjs');
     });
 });
 
@@ -103,7 +103,7 @@ describe('functional', () => {
                     class Bork {
                         static a = 'foo';
                         static b;
-                    
+
                         x = 'bar';
                         y;
                     }
@@ -123,7 +123,7 @@ describe('functional', () => {
                       },
                     },
                 };
-                  
+
                 const baz = obj?.foo?.bar?.baz;
                 `, preset()).code
             ).toMatchSnapshot();

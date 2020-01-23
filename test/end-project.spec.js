@@ -121,7 +121,7 @@ describe('functional', () => {
                     class Bork {
                         static a = 'foo';
                         static b;
-                    
+
                         x = 'bar';
                         y;
                     }
@@ -141,7 +141,7 @@ describe('functional', () => {
                       },
                     },
                 };
-                  
+
                 const baz = obj?.foo?.bar?.baz;
                 `, preset()).code
             ).toMatchSnapshot();
