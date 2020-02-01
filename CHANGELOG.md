@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.4](https://github.com/moxystudio/babel-preset/compare/v3.2.3...v3.2.4) (2020-02-01)
+
+
+### Bug Fixes
+
+* reactivate optional-chaining and nullish-coalescing-operator ([4b03a48](https://github.com/moxystudio/babel-preset/commit/4b03a4820b68e9c7ea9224b22b3c885a14c27e66))
+
 ### [3.2.3](https://github.com/moxystudio/babel-preset/compare/v3.2.2...v3.2.3) (2020-01-23)
 
 ### [3.2.2](https://github.com/moxystudio/babel-preset/compare/v3.2.1...v3.2.2) (2020-01-23)
