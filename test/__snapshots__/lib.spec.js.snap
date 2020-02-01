@@ -5,6 +5,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -29,6 +31,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -51,6 +55,8 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -73,6 +79,8 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -95,6 +103,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -118,6 +128,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -139,6 +151,8 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -160,6 +174,8 @@ exports[`dynamicImport should respect options.modules and options.dynamicImport 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
       Object {
@@ -194,17 +210,23 @@ _defineProperty(Bork, \\"a\\", 'foo');
 _defineProperty(Bork, \\"b\\", void 0);"
 `;
 
-exports[`functional nullish-coalescing-operator should handle correctly 1`] = `"const foo = object.foo ?? 'bar';"`;
+exports[`functional nullish-coalescing-operator should handle correctly 1`] = `
+"var _object$foo;
+
+const foo = (_object$foo = object.foo) !== null && _object$foo !== void 0 ? _object$foo : 'bar';"
+`;
 
 exports[`functional optional-chaining should handle correctly 1`] = `
-"const obj = {
+"var _obj$foo, _obj$foo$bar;
+
+const obj = {
   foo: {
     bar: {
       baz: 42
     }
   }
 };
-const baz = obj?.foo?.bar?.baz;"
+const baz = obj === null || obj === void 0 ? void 0 : (_obj$foo = obj.foo) === null || _obj$foo === void 0 ? void 0 : (_obj$foo$bar = _obj$foo.bar) === null || _obj$foo$bar === void 0 ? void 0 : _obj$foo$bar.baz;"
 `;
 
 exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
@@ -212,6 +234,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     "babel-plugin-add-module-exports",
   ],
@@ -225,6 +249,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -249,6 +275,8 @@ exports[`modules should set modules to false by default if BABEL_ENV is es 1`] =
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -271,6 +299,8 @@ exports[`modules should set modules to false if options.modules is disabled 1`] 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -294,6 +324,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -318,6 +350,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -342,6 +376,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -365,6 +401,8 @@ exports[`namedDefaultExport & babel-plugin-add-module-exports should not enable 
 Object {
   "plugins": Array [
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -388,6 +426,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -412,6 +452,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -436,6 +478,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -460,6 +504,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -483,6 +529,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -506,6 +554,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -537,6 +587,8 @@ Object {
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -569,6 +621,8 @@ Object {
     "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-react-display-name/lib/index.js",
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
@@ -593,6 +647,8 @@ Object {
   "plugins": Array [
     "@babel/plugin-transform-modules-commonjs",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
     "<PROJECT_ROOT>/node_modules/babel-plugin-dynamic-import-node/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/babel-plugin-lodash/lib/index.js",
