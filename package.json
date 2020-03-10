@@ -45,14 +45,14 @@
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "browserslist-config-google": "^1.5.0"
+    "browserslist-config-google": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@moxy/eslint-config": "^10.1.1",
-    "@moxy/jest-config": "^1.4.1",
+    "@moxy/jest-config": "^2.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.1",
     "jest": "^25.1.0",
