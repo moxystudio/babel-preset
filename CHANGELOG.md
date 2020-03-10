@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.5](https://github.com/moxystudio/babel-preset/compare/v3.2.4...v3.2.5) (2020-03-10)
+
 ### [3.2.4](https://github.com/moxystudio/babel-preset/compare/v3.2.3...v3.2.4) (2020-02-01)
 
 
