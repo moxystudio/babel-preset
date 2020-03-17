@@ -70,7 +70,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
 
 > If you don't use a bundler within your project, this is the setup guide you should follow
 
-- Create `.babelrc` at the root of your project, replacing `<preset-type>` with the preset type you chose:
+- Create `.babelrc.json` at the root of your project, replacing `<preset-type>` with the preset type you chose:
 
     ```json
     {
