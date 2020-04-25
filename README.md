@@ -116,7 +116,7 @@ The way Babel is configured depends on the the tooling you are using. Below, the
       "lib"
     ],
     "scripts": {
-      "build": "BABEL_ENV=es babel src -d es"
+      "build": "BABEL_ENV=commonjs babel src -d lib --delete-dir-on-start"
     }
     ```
 - Tweak your `.gitignore` file:
