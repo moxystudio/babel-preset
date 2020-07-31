@@ -189,7 +189,7 @@ For instance, to have smaller bundles when using [recompose](https://github.com/
 
 The targets option has a very important role. By default, its value is `['browsers', 'node']` which means that the compiled code will work in both the Browser and in Node.js.
 
-When `browsers` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
+When `browsers` is specified, the compiled code will work on browsers that are supported by [Google's browser support policy](https://github.com/awkaiser/browserslist-config-google) (modern). When `node` is specified, the compiled code will work on the last LTS or higher (currently `v8.9`).
 
 If your project has different requirements in terms of browser or node support, you may specify the [targets](https://www.npmjs.com/package/babel-preset-env#targets) yourself as an object.
 
