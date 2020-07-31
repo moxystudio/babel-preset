@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/moxystudio/babel-preset/compare/v3.2.6...v3.3.0) (2020-07-31)
+
+
+### Features
+
+* change to browserslist-config-google/modern ([351da1c](https://github.com/moxystudio/babel-preset/commit/351da1cab513f25db25fb0dc42bf039962deafa1))
+
 ### [3.2.6](https://github.com/moxystudio/babel-preset/compare/v3.2.5...v3.2.6) (2020-05-28)
 
 ### [3.2.5](https://github.com/moxystudio/babel-preset/compare/v3.2.4...v3.2.5) (2020-03-10)
