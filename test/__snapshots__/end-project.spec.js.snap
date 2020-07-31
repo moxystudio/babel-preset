@@ -41,7 +41,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -105,7 +105,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -173,7 +173,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -186,12 +186,13 @@ Object {
 `;
 
 exports[`functional class-properties should handle correctly 1`] = `
-"var Bork = function Bork() {
-  \\"use strict\\";
+"class Bork {
+  constructor() {
+    this.x = 'bar';
+    this.y = void 0;
+  }
 
-  this.x = 'bar';
-  this.y = void 0;
-};
+}
 
 Bork.a = 'foo';
 Bork.b = void 0;"
@@ -200,13 +201,14 @@ Bork.b = void 0;"
 exports[`functional nullish-coalescing-operator should handle correctly 1`] = `
 "var _object$foo;
 
-var foo = (_object$foo = object.foo) != null ? _object$foo : 'bar';"
+const foo = (_object$foo = object.foo) != null ? _object$foo : 'bar';"
 `;
 
 exports[`functional object-rest-spread should handle correctly 1`] = `
-"var z = Object.assign({
-  x: x
-}, y);"
+"var z = {
+  x,
+  ...y
+};"
 `;
 
 exports[`functional object-rest-spread should handle correctly for target with support 1`] = `
@@ -219,14 +221,14 @@ exports[`functional object-rest-spread should handle correctly for target with s
 exports[`functional optional-chaining should handle correctly 1`] = `
 "var _obj$foo, _obj$foo$bar;
 
-var obj = {
+const obj = {
   foo: {
     bar: {
       baz: 42
     }
   }
 };
-var baz = obj == null ? void 0 : (_obj$foo = obj.foo) == null ? void 0 : (_obj$foo$bar = _obj$foo.bar) == null ? void 0 : _obj$foo$bar.baz;"
+const baz = obj == null ? void 0 : (_obj$foo = obj.foo) == null ? void 0 : (_obj$foo$bar = _obj$foo.bar) == null ? void 0 : _obj$foo$bar.baz;"
 `;
 
 exports[`lodash should disable the lodash plugin if options.lodash is disabled 1`] = `
@@ -260,7 +262,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -315,7 +317,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -369,7 +371,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -423,7 +425,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -477,7 +479,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -545,7 +547,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -607,7 +609,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -661,7 +663,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },
@@ -766,7 +768,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
         },
         "useBuiltIns": "entry",
@@ -870,7 +872,7 @@ Object {
         "shippedProposals": true,
         "targets": Object {
           "browsers": Array [
-            "extends browserslist-config-google",
+            "extends browserslist-config-google/modern",
           ],
           "node": "8.9",
         },

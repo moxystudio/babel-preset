@@ -38,7 +38,7 @@ module.exports = (context, options) => {
         // Set Nodejs target to be the latest LTS
         targets: Array.isArray(options.targets) ? Object.assign({},
             options.targets.indexOf('node') !== -1 ? { node: '8.9' } : {},
-            options.targets.indexOf('browsers') !== -1 ? { browsers: ['extends browserslist-config-google'] } : {}
+            options.targets.indexOf('browsers') !== -1 ? { browsers: ['extends browserslist-config-google/modern'] } : {}
         ) : options.targets,
         // Enables support for builtin/feature proposals that have native support by the defined target environments
         shippedProposals: true,
