@@ -16,7 +16,6 @@
 
 [Babel](https://babeljs.io/) preset to be used at MOXY.
 
-
 ## Installation
 
 ```ssh
@@ -28,7 +27,6 @@ If you are using Jest for testing, you also need to install [`babel-jest`](https
 ```ssh
 $ npm install babel-jest --save-dev
 ```
-
 
 ## Motivation
 
@@ -51,7 +49,6 @@ Problems arise, however, in libraries which target both Node.js and browser, or 
 
 1. For libraries, you need to transpile if you want to publish both in CommonJS and ES or if there are non-standard JavaScript language features being used
 2. For top-level projects, you need to transpile both your code and your dependencies if the JavaScript language features being used are not supported by your targets
-
 
 ## Usage
 
@@ -210,7 +207,6 @@ The `modules` default value is `commonjs` unless `process.env.BABEL_ENV` is set 
 
 No, seriously. Read the [Caveats](#caveats) section as it contains crucial information and might require you to do a few more steps.
 
-
 ## Caveats
 
 ### Polyfills
@@ -258,14 +254,12 @@ The caveat is that [`preset-env`](https://www.npmjs.com/package/babel-preset-env
 You must use a minifier that understands ES6+ syntax because the transpiled code might contain ES6+ code.
 As an example, UglifyJS v2 only understands ES5 syntax but [UglifyJS v3](https://www.npmjs.com/package/uglify-es) does support ES6+.
 
-
 ## Tests
 
 ```sh
 $ npm test
 $ npm test -- --watch # during development
 ```
-
 
 ## License
 
