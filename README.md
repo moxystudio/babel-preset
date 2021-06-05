@@ -1,12 +1,12 @@
 # babel-preset
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 [npm-url]:https://npmjs.org/package/@moxy/babel-preset
 [npm-image]:https://img.shields.io/npm/v/@moxy/babel-preset.svg
 [downloads-image]:https://img.shields.io/npm/dm/@moxy/babel-preset.svg
-[travis-url]:https://travis-ci.org/moxystudio/babel-preset
-[travis-image]:https://img.shields.io/travis/moxystudio/babel-preset/master.svg
+[build-status-url]:https://github.com/moxystudio/jest-config/actions
+[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/jest-config/Node%20CI/master
 [codecov-url]:https://codecov.io/gh/moxystudio/babel-preset
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/babel-preset/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/babel-preset
@@ -138,7 +138,7 @@ Tweak your Webpack config JavaScript rule to include [`babel-loader`](https://ww
             options: {
                 cacheDirectory: true,  // Improve performance
                 presets: [
-                    [require.resolve('@moxy/babel-preset/end-proect'), {
+                    [require.resolve('@moxy/babel-preset/end-project'), {
                         targets: ['browsers'],
                         react: true,
                         modules: false,

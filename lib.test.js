@@ -2,7 +2,7 @@
 
 const babelCore = require('@babel/core');
 const serializerPath = require('jest-serializer-path');
-const preset = require('../lib');
+const preset = require('./lib');
 
 const env = process.env.NODE_ENV;
 
