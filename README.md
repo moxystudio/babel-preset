@@ -5,8 +5,8 @@
 [npm-url]:https://npmjs.org/package/@moxy/babel-preset
 [npm-image]:https://img.shields.io/npm/v/@moxy/babel-preset.svg
 [downloads-image]:https://img.shields.io/npm/dm/@moxy/babel-preset.svg
-[build-status-url]:https://github.com/moxystudio/jest-config/actions
-[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/jest-config/Node%20CI/master
+[build-status-url]:https://github.com/moxystudio/babel-preset/actions
+[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/babel-preset/Node%20CI/master
 [codecov-url]:https://codecov.io/gh/moxystudio/babel-preset
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/babel-preset/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/babel-preset
